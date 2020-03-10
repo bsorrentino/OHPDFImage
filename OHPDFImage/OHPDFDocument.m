@@ -35,6 +35,28 @@
 
 #pragma mark - Constructors
 
+- (instancetype)init
+{
+    return [self initWithRef:nil];
+}
+
+- (instancetype)initWithRef:(CGPDFDocumentRef)docRef
+{
+    if (!docRef)
+    {
+         return nil;
+    }
+
+    self = [super init];
+    if (self)
+    {
+        CGPDFDocumentRetain(docRef);
+        _documentRef = docRef;
+        _pagesCount = CGPDFDocumentGetNumberOfPages(docRef);
+    }
+    return self;
+}
+
 + (instancetype)documentWithData:(NSData *)data
 {
     if (!data) return nil;
@@ -69,17 +91,6 @@
     return [[self alloc] initWithRef:docRef];
 }
 
-- (instancetype)initWithRef:(CGPDFDocumentRef)docRef
-{
-    self = [super init];
-    if (self)
-    {
-        CGPDFDocumentRetain(docRef);
-        _documentRef = docRef;
-        _pagesCount = CGPDFDocumentGetNumberOfPages(docRef);
-    }
-    return self;
-}
 
 - (void)dealloc
 {
