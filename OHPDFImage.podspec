@@ -17,9 +17,8 @@ Pod::Spec.new do |s|
   s.author       = { 'Olivier Halligon' => 'olivier.halligon+ae@gmail.com' }
   s.homepage     = 'http://github.com/AliSoftware/OHPDFImage'
 
-  s.platform     = :ios, :tvos
-  s.ios.deployment_target = '6'
-  s.tvos.deployment_target ='11'
+  s.ios.deployment_target = '6.0'
+  s.tvos.deployment_target ='11.0'
 
   s.source       = { :git => 'https://github.com/AliSoftware/OHPDFImage.git', :tag => s.version.to_s }
 
