@@ -16,17 +16,18 @@ Pod::Spec.new do |s|
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.author       = { 'Olivier Halligon' => 'olivier.halligon+ae@gmail.com' }
   s.homepage     = 'http://github.com/AliSoftware/OHPDFImage'
-  
-  s.platform     = :ios, '5.0'
+
+  s.platform     = :ios, :tvos
+  s.ios.deployment_target = '6'
+  s.tvos.deployment_target ='11'
 
   s.source       = { :git => 'https://github.com/AliSoftware/OHPDFImage.git', :tag => s.version.to_s }
 
   s.source_files  = 'OHPDFImage/**/*.{h,m}'
-  
+
 
   s.frameworks = 'QuartzCore', 'UIKit'
 
   s.requires_arc = true
 
 end
-
