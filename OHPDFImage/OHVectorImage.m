@@ -85,6 +85,11 @@
     return [[self alloc] initWithPDFPage:pdfPage];
 }
 
+- (instancetype)init
+{
+    return [self initWithPDFPage:nil];
+}
+
 - (instancetype)initWithPDFPage:(OHPDFPage*)pdfPage
 {
     if (!pdfPage) return nil;
