@@ -38,8 +38,17 @@
     return [[self alloc] initWithRef:pageRef];
 }
 
+- (instancetype)init
+{
+    return [self initWithRef:nil];
+}
+
 - (instancetype)initWithRef:(CGPDFPageRef)pageRef
 {
+    if( pageRef == nil ) {
+        return nil;
+    }
+    
     self = [super init];
     if (self)
     {
