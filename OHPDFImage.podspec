@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = 'OHPDFImage'
-  s.version      = '3.2.1'
+  s.version      = '4.0.0'
   s.summary      = "OHPDFImage allows you to use a PDF as a vector UIImage"
 
   s.description  = <<-DESC
@@ -14,11 +14,12 @@ Pod::Spec.new do |s|
                    DESC
 
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
-  s.author       = { 'Olivier Halligon' => 'olivier.halligon+ae@gmail.com' }
-  s.homepage     = 'http://github.com/AliSoftware/OHPDFImage'
+  s.author       = { 'Olivier Halligon' => 'olivier.halligon+ae@gmail.com',
+                      'Bartolomeo Sorrentino' => 'bartolomeo.sorrentino@gmail.com' }
+  s.homepage     = 'https://github.com/bsorrentino/OHPDFImage.git'
 
   s.ios.deployment_target = '6.0'
-  s.tvos.deployment_target ='11.0'
+  s.tvos.deployment_target ='12.0'
 
   s.source       = { :git => 'https://github.com/AliSoftware/OHPDFImage.git', :tag => s.version.to_s }
 
